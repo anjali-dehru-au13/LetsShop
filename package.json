@@ -8,7 +8,12 @@
     "node": "14.x"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon Backend/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon Backend/server",
+    "seeder": "node backend/utils/seeder.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION = false && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
