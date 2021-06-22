@@ -1,8 +1,8 @@
 {
   "name": "heroku",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "full ecommerce site using mern",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
