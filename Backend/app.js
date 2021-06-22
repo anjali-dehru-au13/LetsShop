@@ -7,7 +7,7 @@ app.use(cookieParser())
 // const dotenv = require('dotenv')
 const path= require('path')
 // setting up config file
-if (process.env.NODE_ENV!=='PRODUCTION') require('dotenv').dotenv.config({path:'backend/config.env'})
+if (process.env.NODE_ENV!=='PRODUCTION') require('dotenv').config({path:'backend/config.env'})
 
 
 // Import all routes
