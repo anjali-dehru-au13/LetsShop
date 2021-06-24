@@ -26,16 +26,18 @@ const ProcessOrder = ({ match }) => {
     useEffect(() => {
 
         dispatch(getOrderDetails(orderId))
-        if (isUpdated) {
-            alert.success('Order updated successfully');
-            dispatch({ type: UPDATE_ORDER_RESET })
-        }
 
         if (error) {
             alert.error(error);
             dispatch(clearErrors())
         }
-        
+
+
+        if (isUpdated) {
+            alert.success('Order updated successfully');
+            dispatch({ type: UPDATE_ORDER_RESET })
+        }
+
     }, [dispatch, alert, error, isUpdated, orderId])
 
 
@@ -91,9 +93,9 @@ const ProcessOrder = ({ match }) => {
                                     <div className="cart-item my-1">
                                         {orderItems && orderItems.map(item => (
                                             <div key={item.product} className="row my-5">
-                                                {/* <div className="col-4 col-lg-2">
+                                                <div className="col-4 col-lg-2">
                                                     <img src={item.image} alt={item.name} height="45" width="65" />
-                                                </div> */}
+                                                </div>
 
                                                 <div className="col-5 col-lg-5">
                                                     <Link to={`/products/${item.product}`}>{item.name}</Link>
